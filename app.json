@@ -1,0 +1,60 @@
+{
+  "id": "deckcraft",
+  "name": "DeckCraft",
+  "tagline": "PowerPoint-style presentations (.pptx)",
+  "upstream": "storytold/deckcraft",
+  "port": 7990,
+  "docsPort": 7990,
+  "launch": {
+    "args": [
+      "--control",
+      "{port}"
+    ]
+  },
+  "mcp": {
+    "server": "deckcraft",
+    "live": [
+      "mcp",
+      "--connect",
+      "{port}"
+    ],
+    "headless": [
+      "mcp"
+    ],
+    "default": "live"
+  },
+  "windows": {
+    "dirs": [
+      "{ProgramFiles}\\DeckCraft",
+      "{LocalAppData}\\Programs\\DeckCraft"
+    ],
+    "app": "deckcraft.exe",
+    "cli": "deckcraft-cli.exe"
+  },
+  "macos": {
+    "bundles": [
+      "/Applications/DeckCraft.app",
+      "{home}/Applications/DeckCraft.app"
+    ],
+    "appBinary": "Contents/MacOS/DeckCraft",
+    "cliPaths": [
+      "{home}/.artcraft/bin/deckcraft-cli",
+      "/usr/local/bin/deckcraft-cli",
+      "/opt/homebrew/bin/deckcraft-cli",
+      "{bundle}/Contents/MacOS/deckcraft-cli"
+    ],
+    "cliReleaseAsset": "deckcraft-cli-{version}-macos-universal.zip",
+    "cliBinaryInZip": "deckcraft-cli"
+  },
+  "prepare": {
+    "dirs": []
+  },
+  "auth": {
+    "type": "none",
+    "notes": "Loopback only, no token."
+  },
+  "verified": {
+    "windows": true,
+    "macos": false
+  }
+}

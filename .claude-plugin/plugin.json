@@ -1,0 +1,16 @@
+{
+  "name": "deckcraft",
+  "version": "1.0.0",
+  "description": "Create and edit presentations (.pptx) with DeckCraft (PowerPoint-style, ArtCraft suite) through MCP, the CLI or the control channel, and set up, connect or troubleshoot its MCP server on Windows and macOS.",
+  "author": {
+    "name": "Vinciux99"
+  },
+  "homepage": "https://github.com/Vinciux99/deckcraft-claude-skill",
+  "license": "MIT",
+  "keywords": [
+    "artcraft",
+    "deckcraft",
+    "mcp",
+    "skill"
+  ]
+}
